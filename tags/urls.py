@@ -1,5 +1,5 @@
 from django.urls import path
-from tags.views import CreateTagView, TagDetailv1, TagDetailViewv2, DeleteTagView1, DeleteTagView2 
+from tags.views import CreateTagView, TagDetailv1, TagDetailViewv2, DeleteTagView1, DeleteTagView2, TagListView1, TagListView2
 
 urlpatterns = [
     path('create/', CreateTagView.as_view(), name='create-tag'),
@@ -7,4 +7,6 @@ urlpatterns = [
     path('tag-detail/v2/<str:slug>', TagDetailViewv2.as_view(), name='tag-detail-v2'),
     path('tag-delete/v1/<str:slug>', DeleteTagView1.as_view(), name='tag-delete-v1'),
     path('tag-delete/v2/<str:slug>', DeleteTagView2.as_view(), name='tag-delete-v2'),
+    path('tag-list/v1', TagListView1.as_view(), name='tag-list-v1'),
+    path('tag-list/v2', TagListView2.as_view(), name='tag-list-v2'),
 ]
