@@ -3,7 +3,7 @@ from rest_framework import views, status
 from rest_framework.response import Response 
 from tags.serializer import WriteTagSerializer, ReadTagSerializer 
 from tags.models import Tags 
-from django.utils.text import slugify 
+from django.utils.text import slugify
 from rest_framework.generics import RetrieveAPIView, DestroyAPIView, ListAPIView
 from rest_framework.views import APIView
 
